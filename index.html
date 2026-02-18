@@ -2,106 +2,31 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ramadan Countdown & Time</title>
+<title>One Piece Chapter</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #fefefe;
-    color: #222;
-  }
-  #clock {
-    font-size: 2rem;
-    margin-top: 20px;
-  }
-  #countdown {
-    font-size: 3rem;
-    margin-top: 30px;
-    font-weight: bold;
-  }
-  table {
-    margin: 20px auto;
-    border-collapse: collapse;
-  }
-  th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 130px;
-  }
-  th {
-    background: #4caf50;
-    color: white;
-  }
-  .friday {
-    background: #d1f7d1;
-  }
+body{
+  margin:0;
+  background:#111;
+  text-align:center;
+}
+img{
+  width:100%;
+  max-width:800px;
+  display:block;
+  margin:10px auto;
+}
+h2{
+  color:white;
+}
 </style>
 </head>
 <body>
 
-<h1>🌙 Ramadan Countdown & Current Time</h1>
+<h2>One Piece - Chapter 1</h2>
 
-<div id="clock"></div>
-
-<div id="countdown"></div>
-
-<h2>Ramadan Prayer Times (Bangladesh – Dhaka)</h2>
-<table>
-  <tr>
-    <th>Date</th>
-    <th>Fajr</th>
-    <th>Maghrib (Iftar)</th>
-  </tr>
-  <!-- Example from Ramadan 1447 AH 2026 -->
-  <tr class="friday">
-    <td>18 Feb 2026</td>
-    <td>05:14 AM</td>
-    <td>05:55 PM</td>
-  </tr>
-  <tr>
-    <td>19 Feb 2026</td>
-    <td>05:13 AM</td>
-    <td>05:56 PM</td>
-  </tr>
-  <tr class="friday">
-    <td>20 Feb 2026</td>
-    <td>05:12 AM</td>
-    <td>05:57 PM</td>
-  </tr>
-  <!-- add more after if needed -->
-</table>
-
-<script>
-// 🕰️ Current Time Clock
-function updateClock() {
-  let now = new Date();
-  document.getElementById("clock").innerHTML = 
-    "🇧🇩 Bangladesh Time: " + now.toLocaleTimeString("en-US", {hour12:true});
-}
-setInterval(updateClock, 1000);
-
-// 🕙 Countdown to next Ramadan start (approx 18 Feb 2026 midnight BST)
-const ramadanStart = new Date("February 18, 2026 00:00:00 GMT+0600").getTime();
-
-function updateCountdown() {
-  let now = new Date().getTime();
-  let dist = ramadanStart - now;
-
-  if (dist < 0) {
-    document.getElementById("countdown").innerHTML = "✨ Ramadan has Started!";
-    return;
-  }
-
-  let d = Math.floor(dist / (1000 * 60 * 60 * 24));
-  let h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
-  let s = Math.floor((dist % (1000 * 60)) / 1000);
-
-  document.getElementById("countdown").innerHTML = 
-    d + "d " + h + "h " + m + "m " + s + "s until Ramadan";
-}
-setInterval(updateCountdown, 1000);
-</script>
+<img src="Onepiece1.jpg.png">
+<img src="Onepiece2.jpg.png">
+<img src="Onepiece3.jpg.png">
 
 </body>
 </html>
